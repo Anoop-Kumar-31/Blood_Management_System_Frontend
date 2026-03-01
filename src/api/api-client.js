@@ -1,5 +1,5 @@
 
-const BASE_URL = import.meta.env.BACKEND_URL;  // Empty string means use Vite proxy (relative paths)
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;  // Empty string means use Vite proxy (relative paths)
 
 async function request(endpoint, options = {}) {
     const url = `${BASE_URL}${endpoint}`;
