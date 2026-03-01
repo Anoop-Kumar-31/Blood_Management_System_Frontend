@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { registerDonor } from '../api/donor.api';
 import EmailVerification from '../components/EmailVerification';
+import { BsShieldLockFill } from 'react-icons/bs';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
@@ -84,7 +86,7 @@ export default function RegisterDonorPage() {
                         </div>
 
                         <div className="flex items-center gap-2 text-sm text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-xl px-4 py-2.5">
-                            <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                            <BsShieldLockFill className="text-primary-600 text-lg" />
                             Email verified: <span className="font-semibold">{email}</span>
                         </div>
 
@@ -160,7 +162,7 @@ export default function RegisterDonorPage() {
                         <button type="submit" disabled={formLoading} className="btn-primary w-full">
                             {formLoading ? (
                                 <span className="flex items-center justify-center gap-2">
-                                    <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
+                                    <AiOutlineLoading3Quarters className="animate-spin text-lg" />
                                     Registering...
                                 </span>
                             ) : 'Register as Donor →'}

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { sendOtp, verifyOtp } from '../api/auth.api';
+import { BsShieldLockFill } from 'react-icons/bs';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 export default function EmailVerification({ onVerified, title, subtitle }) {
     const [email, setEmail] = useState('');
@@ -50,7 +52,7 @@ export default function EmailVerification({ onVerified, title, subtitle }) {
 
             {error && (
                 <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-100 text-red-600 text-sm flex items-center gap-2">
-                    <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" /></svg>
+                    <BsShieldLockFill className="text-primary-600 text-lg" />
                     {error}
                 </div>
             )}
@@ -77,15 +79,15 @@ export default function EmailVerification({ onVerified, title, subtitle }) {
                                 type="text"
                                 value={otp}
                                 onChange={(e) => setOtp(e.target.value)}
-                                placeholder="• • • •"
+                                placeholder="••••"
                                 maxLength={4}
-                                className="input-field text-center text-lg tracking-[0.5em] font-mono"
+                                className="input-field text-center text-2xl font-bold tracking-[1em] font-mono"
                                 required
                             />
                             <button type="submit" disabled={loading} className="btn-primary whitespace-nowrap text-sm">
                                 {loading ? (
                                     <span className="flex items-center gap-2">
-                                        <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
+                                        <AiOutlineLoading3Quarters className="animate-spin text-lg" />
                                         Verifying
                                     </span>
                                 ) : 'Verify'}
@@ -100,7 +102,7 @@ export default function EmailVerification({ onVerified, title, subtitle }) {
                     >
                         {loading ? (
                             <span className="flex items-center justify-center gap-2">
-                                <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
+                                <AiOutlineLoading3Quarters className="animate-spin text-lg" />
                                 Sending OTP...
                             </span>
                         ) : 'Send OTP →'}

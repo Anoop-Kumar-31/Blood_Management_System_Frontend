@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react';
 import { searchBloodBanks } from '../api/blood-bank.api';
 import BloodBankCard from '../components/BloodBankCard';
+import { BsBank, BsSearch } from 'react-icons/bs';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 const INDIAN_STATES = [
     'Andaman And Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam',
@@ -85,7 +87,7 @@ export default function FindBloodBankPage() {
                 {/* Header */}
                 <div className="text-center mb-8 animate-fade-in-up">
                     <div className="inline-flex items-center gap-2 bg-green-100/80 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-3">
-                        🏛️ Government-verified directory &middot; Last synced 01/03/2026 &middot; Source: data.gov.in
+                        <span className="flex items-center gap-1.5"><BsBank className="text-emerald-500" /> Government-verified directory</span> &middot; Last synced 01/03/2026 &middot; Source: data.gov.in
                     </div>
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Find Blood Banks</h1>
                     <p className="text-gray-500">Search across 2,800+ verified blood banks in India</p>
@@ -106,10 +108,12 @@ export default function FindBloodBankPage() {
                     <button type="submit" disabled={loading} className="w-full py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg shadow-blue-200 hover:bg-blue-700 disabled:opacity-50 transition-all">
                         {loading ? (
                             <span className="flex items-center justify-center gap-2">
-                                <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>
+                                <AiOutlineLoading3Quarters className="animate-spin text-lg" />
                                 Searching...
                             </span>
-                        ) : '🔍 Search Blood Banks'}
+                        ) : (
+                            <span className="flex items-center justify-center gap-2"><BsSearch /> Search Blood Banks</span>
+                        )}
                     </button>
                 </form>
 
@@ -190,7 +194,7 @@ export default function FindBloodBankPage() {
                         {/* Cards Grid */}
                         {pageResults.length === 0 ? (
                             <div className="text-center py-16">
-                                <div className="text-5xl mb-4">🏥</div>
+                                <div className="text-5xl mb-4 text-gray-300 flex justify-center"><HiOutlineBuildingOffice2 /></div>
                                 <p className="text-xl font-semibold text-gray-400">{hasActiveFilters ? 'No matches for these filters' : 'No blood banks found'}</p>
                                 <p className="text-gray-400 mt-1">{hasActiveFilters ? 'Try adjusting your filters' : 'Try a different state'}</p>
                                 {hasActiveFilters && (

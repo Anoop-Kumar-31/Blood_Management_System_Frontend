@@ -1,11 +1,13 @@
+import { BsEnvelope, BsTelephone, BsGeoAlt, BsCalendarEvent } from 'react-icons/bs';
+
 export default function DonorCard({ donor, isExactMatch }) {
     const initials = donor.Name?.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
 
     return (
         <div className={`group rounded-2xl border p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
       ${isExactMatch
-                ? 'border-primary-200 bg-gradient-to-br from-primary-50/80 to-white shadow-md shadow-primary-100/50'
-                : 'border-gray-150 bg-white shadow-sm hover:border-primary-200'
+                ? 'border-primary-100 bg-gradient-to-br from-primary-50/80 to-white shadow-md shadow-primary-100/50'
+                : 'border-gray-100 bg-white shadow-sm hover:border-primary-200'
             }`}>
             <div className="flex items-center gap-4 mb-4">
                 {/* Avatar */}
@@ -30,10 +32,10 @@ export default function DonorCard({ donor, isExactMatch }) {
             </div>
 
             <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-sm">
-                <p className="text-gray-500"><span className="font-medium text-gray-700">📧</span> {donor.Username}</p>
-                <p className="text-gray-500"><span className="font-medium text-gray-700">📞</span> {donor.PhoneNumber}</p>
-                <p className="text-gray-500"><span className="font-medium text-gray-700">📍</span> {donor.Pincode}, {donor.State}</p>
-                {donor.Age && <p className="text-gray-500"><span className="font-medium text-gray-700">🎂</span> {donor.Age} years</p>}
+                <p className="text-gray-500 flex items-center gap-1.5"><BsEnvelope className="text-gray-400" /> {donor.Username}</p>
+                <p className="text-gray-500 flex items-center gap-1.5"><BsTelephone className="text-gray-400" /> {donor.PhoneNumber}</p>
+                <p className="text-gray-500 flex items-center gap-1.5"><BsGeoAlt className="text-gray-400" /> {donor.Pincode}, {donor.State}</p>
+                {donor.Age && <p className="text-gray-500 flex items-center gap-1.5"><BsCalendarEvent className="text-gray-400" /> {donor.Age} years</p>}
             </div>
 
             {donor.Availability && donor.Availability.length > 0 && (
