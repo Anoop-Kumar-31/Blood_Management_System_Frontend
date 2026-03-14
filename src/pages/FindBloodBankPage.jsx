@@ -3,6 +3,7 @@ import { searchBloodBanks } from '../api/blood-bank.api';
 import BloodBankCard from '../components/BloodBankCard';
 import { BsBank, BsSearch } from 'react-icons/bs';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 
 const INDIAN_STATES = [
     'Andaman And Nicobar Islands', 'Andhra Pradesh', 'Arunachal Pradesh', 'Assam',
