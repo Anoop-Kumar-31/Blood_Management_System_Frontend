@@ -21,8 +21,7 @@ export default function Navbar() {
             <div className="section-container flex items-center justify-between h-16">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2.5 group">
-                    <img src="/assets/images/LOGO.png" alt="HeartBeat" className="h-12 w-35 group-hover:scale-105 transition-transform duration-200 brightness-190" />
-                    <span className="text-xs text-gray-400 italic self-end">This is a dummy project!</span>
+                    <img src="/assets/images/LOGO.png" alt="HeartBeat" className="h-12 w-35 group-hover:scale-105 transition-transform duration-200" />
                 </Link>
 
                 {/* Desktop Links */}

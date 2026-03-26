@@ -51,7 +51,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* Outro */}
-                <div className="bg-gradient-to-br from-primary-50 to-rose-50 rounded-2xl p-8 border border-primary-100 animate-fade-in-up">
+                <div className="bg-linear-to-br from-primary-50 to-rose-50 rounded-2xl p-8 border border-primary-100 animate-fade-in-up">
                     <p className="text-gray-700 leading-relaxed">
                         Join our platform today and discover the power of community support when it matters most. Together, we can save lives by bridging the gap between those in need and those ready to make a life-saving difference.
                     </p>

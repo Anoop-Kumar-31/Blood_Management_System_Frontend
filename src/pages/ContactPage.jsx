@@ -1,6 +1,6 @@
 export default function ContactPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-rose-50 py-16 px-6">
+        <div className="min-h-screen bg-linear-to-br from-primary-50 via-white to-rose-50 py-16 px-6">
             <div className="max-w-lg mx-auto">
                 <div className="text-center mb-8 animate-fade-in-up">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">Get in Touch</h1>

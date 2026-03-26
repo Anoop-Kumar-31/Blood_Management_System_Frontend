@@ -6,7 +6,7 @@ export default function DonorCard({ donor, isExactMatch }) {
     return (
         <div className={`group rounded-2xl border p-5 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
       ${isExactMatch
-                ? 'border-primary-100 bg-gradient-to-br from-primary-50/80 to-white shadow-md shadow-primary-100/50'
+                ? 'border-primary-100 bg-linear-to-br from-primary-50/80 to-white shadow-md shadow-primary-100/50'
                 : 'border-gray-100 bg-white shadow-sm hover:border-primary-200'
             }`}>
             <div className="flex items-center gap-4 mb-4">

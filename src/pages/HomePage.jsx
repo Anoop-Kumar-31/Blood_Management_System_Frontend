@@ -37,7 +37,7 @@ export default function HomePage() {
     return (
         <div className="min-h-screen">
             {/* ========== HERO SECTION ========== */}
-            <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-rose-50">
+            <section className="relative overflow-hidden bg-linear-to-br from-primary-50 via-white to-rose-50">
                 {/* Decorative blobs */}
                 <div className="absolute top-20 -left-20 w-72 h-72 bg-primary-200/30 rounded-full blur-3xl" />
                 <div className="absolute bottom-10 right-0 w-80 h-80 bg-pink-200/20 rounded-full blur-3xl" />
@@ -90,7 +90,7 @@ export default function HomePage() {
                             <img
                                 src="/assets/images/PicFront01.png"
                                 alt="Blood donation"
-                                className="w-full max-w-lg mx-auto rounded-[2rem] shadow-2xl shadow-primary-200/40 border-4 border-white"
+                                className="w-full max-w-lg mx-auto rounded-4xl shadow-2xl shadow-primary-200/40 border-4 border-white"
                             />
                             {/* Floating service card */}
                             <div className="absolute -bottom-6 -left-6 glass-card rounded-2xl shadow-xl p-4 animate-float">
@@ -115,7 +115,7 @@ export default function HomePage() {
 
             {/* ========== STATS BAR ========== */}
             <section className="bg-gray-950 relative overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px bg-gradient-to-r from-transparent via-primary-500/50 to-transparent" />
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-px bg-linear-to-r from-transparent via-primary-500/50 to-transparent" />
                 <div className="section-container py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
                     {stats.map((s, i) => (
                         <div key={s.label} className={`text-center animate-fade-in-up delay-${(i + 1) * 100}`}>
@@ -189,9 +189,9 @@ export default function HomePage() {
                         {howItWorks.map((step, i) => (
                             <div key={step.step} className={`relative text-center animate-fade-in-up delay-${(i + 1) * 100}`}>
                                 {i < howItWorks.length - 1 && (
-                                    <div className="hidden md:block absolute top-8 left-[62%] w-[80%] h-px bg-gradient-to-r from-primary-300 to-transparent" />
+                                    <div className="hidden md:block absolute top-8 left-[62%] w-[80%] h-px bg-linear-to-r from-primary-300 to-transparent" />
                                 )}
-                                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-600 to-primary-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-200">
+                                <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-primary-600 to-primary-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-200">
                                     {step.icon}
                                 </div>
                                 <h3 className="font-bold text-gray-900 mb-2">{step.title}</h3>
@@ -236,9 +236,9 @@ export default function HomePage() {
 
                     {/* Divider */}
                     <div className="my-20 flex items-center gap-4">
-                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                        <div className="flex-1 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
                         <BsDroplet className="text-primary-300 text-xl" />
-                        <div className="flex-1 h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+                        <div className="flex-1 h-px bg-linear-to-r from-transparent via-gray-200 to-transparent" />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-14 items-center">
@@ -313,7 +313,7 @@ export default function HomePage() {
             </section>
 
             {/* ========== CTA ========== */}
-            <section className="py-20 bg-gradient-to-br from-primary-700 via-primary-600 to-rose-600 relative overflow-hidden">
+            <section className="py-20 bg-linear-to-br from-primary-700 via-primary-600 to-rose-600 relative overflow-hidden">
                 <div className="absolute top-10 left-10 w-40 h-40 bg-white/5 rounded-full" />
                 <div className="absolute bottom-10 right-10 w-60 h-60 bg-white/5 rounded-full" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-white/3 rounded-full" />

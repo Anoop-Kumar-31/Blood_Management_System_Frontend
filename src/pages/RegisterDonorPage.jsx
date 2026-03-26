@@ -50,7 +50,7 @@ export default function RegisterDonorPage() {
 
     if (success) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 to-white px-6">
+            <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-emerald-50 to-white px-6">
                 <div className="text-center space-y-5 animate-fade-in-up">
                     <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto text-4xl">🎉</div>
                     <h2 className="text-3xl font-bold text-gray-900">Registration Successful!</h2>
@@ -62,7 +62,7 @@ export default function RegisterDonorPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-rose-50 py-14 px-6">
+        <div className="min-h-screen bg-linear-to-br from-primary-50 via-white to-rose-50 py-14 px-6">
             <div className="max-w-xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-8 animate-fade-in-up">

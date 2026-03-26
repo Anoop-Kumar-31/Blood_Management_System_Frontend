@@ -83,7 +83,7 @@ export default function FindBloodBankPage() {
     const hasActiveFilters = filterPin || filterCity || filterCategory !== 'All';
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-14 px-6">
+        <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-indigo-50 py-14 px-6">
             <div className="max-w-5xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-8 animate-fade-in-up">

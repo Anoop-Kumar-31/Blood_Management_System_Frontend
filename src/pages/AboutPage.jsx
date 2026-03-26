@@ -20,7 +20,7 @@ const people = [
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-rose-50 py-16 px-6">
+        <div className="min-h-screen bg-linear-to-br from-primary-50 via-white to-rose-50 py-16 px-6">
             <div className="max-w-2xl mx-auto">
                 <div className="text-center mb-12 animate-fade-in-up">
                     <h1 className="text-4xl font-extrabold text-gray-900 mb-2">About HeartBeat</h1>
@@ -30,7 +30,7 @@ export default function AboutPage() {
                 {people.map((person) => (
                     <div key={person.id} className="glass-card rounded-2xl shadow-xl overflow-hidden animate-fade-in-up delay-200">
                         {/* Cover gradient */}
-                        <div className="h-35 bg-gradient-to-br from-primary-700 to-primary-500 relative  flex justify-center items-center">
+                        <div className="h-35 bg-linear-to-br from-primary-700 to-primary-500 relative  flex justify-center items-center">
                             <div className="absolute md:-bottom-20 -bottom-15 md:left-8 w-35 h-fit">
                                 <img
                                     src={person.image}

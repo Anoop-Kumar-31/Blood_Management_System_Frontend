@@ -41,7 +41,7 @@ export default function SearchDonorPage() {
     const recommendations = donors.filter(d => String(d.Pincode) !== String(searchPin));
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-rose-50 py-14 px-6">
+        <div className="min-h-screen bg-linear-to-br from-primary-50 via-white to-rose-50 py-14 px-6">
             <div className="max-w-3xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-8 animate-fade-in-up">
